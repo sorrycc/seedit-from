@@ -5,9 +5,16 @@ module.exports = {
         var $blocks = $(parent).find('[data-from]');
         // walk each data-from block
         $blocks.each(function(index, one) {
+            var $this = $(one);
             var value = $(this).data('from');
+            var $links;
+            if ($this.is('a')) {
+                $links = $this;
+            } else {
+                $links = $this.find('a');
+            }
             // walk each link
-            $(one).find('a').each(function(_index, _link) {
+            $links.each(function(_index, _link) {
                 walkSingleLink(_link, value, force);
             });
         });
@@ -15,6 +22,11 @@ module.exports = {
 };
 
 function walkSingleLink(link, fromVal, force) {
+    var href = $(link).attr('href');
+    // no links, no search value appended.
+    if (href === '#' || /^javascript/.test(href)) {
+        return;
+    }
     var originalSearch = link.search;
     if (!originalSearch) {
         link.search += '?from=' + fromVal;
