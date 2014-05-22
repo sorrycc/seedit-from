@@ -1,0 +1,29 @@
+{
+  "name": "seedit-from",
+  "version": "0.0.2",
+  "description": "seedit common script",
+  "homepage": "https://github.com/lizheng/seeditBase",
+  "author": "airyland",
+  "maintainers": [
+    "airyland"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lizheng/seeditBase.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": [],
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "alias": {},
+    "devAlias": {},
+    "engines": {},
+    "devDependencies": {
+      "jquery": "2.1.0",
+      "expect": "0.3.1"
+    }
+  }
+}
