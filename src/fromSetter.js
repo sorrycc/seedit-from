@@ -3,7 +3,6 @@ module.exports = {
     walk: function (parent, force) {
         parent = parent || document;
         var $blocks = $(parent).find('[data-from]');
-        console.log($blocks);
         // walk each data-from block
         $blocks.each(function (index, one) {
             var $this = $(one);
@@ -14,10 +13,8 @@ module.exports = {
             } else {
                 $links = $this.find('a');
             }
-            console.log($(one))
             // set index when is a ul element
             if ($(one).attr('data-from-index') === 'true' && $(one).is('ul')) {
-                console.log('true');
                 $(one).find('li').each(function (_index, _one) {
                     $(_one).find('a').attr('data-from-index', _index + 1);
                 });
