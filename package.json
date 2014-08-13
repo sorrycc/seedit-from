@@ -22,7 +22,6 @@
     "devAlias": {},
     "engines": {},
     "devDependencies": {
-      "jquery": "2.1.0",
       "expect": "0.3.1"
     },
     "dependencies": {
