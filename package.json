@@ -22,7 +22,7 @@
     "devAlias": {},
     "engines": {},
     "devDependencies": {
-      "expect": "0.3.1"
+      "expect.js": "0.3.1"
     },
     "dependencies": {
       "jquery": "1.8.3"
