@@ -1,3 +1,4 @@
 
-console.log(1);
+define(function(require, module, exports) {
 var fromSetter = require('../index');
+});
