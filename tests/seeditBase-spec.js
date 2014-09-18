@@ -1,5 +1,5 @@
-var expect = require('expect');
-var fromSetter = require('index');
+var expect = require('expect.js');
+var fromSetter = require('../index');
 var $ = require('jquery');
 
 
